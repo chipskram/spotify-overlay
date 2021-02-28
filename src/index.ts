@@ -1,5 +1,6 @@
-const { QMainWindow } = require("@nodegui/nodegui");
-const win = new QMainWindow();
-win.show();
+import {mainWindow} from "./windows/MainWindow";
 
-(global as any).win = win;
+mainWindow.show();
+
+// Prevent garbage collection
+(global as any).mainWindow = mainWindow;

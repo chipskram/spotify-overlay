@@ -15,11 +15,13 @@
   "repository": "github:chipskater/spotify-overlay",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@nodegui/nodegui": "^0.30.1"
+    "@nodegui/nodegui": "^0.30.1",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@nodegui/packer": "^1.4.1",
     "@types/gulp": "^4.0.8",
+    "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.31",
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^6.2.0",
