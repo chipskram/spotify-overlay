@@ -78,4 +78,4 @@ const init = () => {
 }
 
 init();
-export { overlayWindow }
+export { overlayWindow };
