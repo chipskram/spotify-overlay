@@ -189,3 +189,6 @@ fabric.properties
 
 # local config files
 config/local.json
+
+# deployment folder
+deploy
