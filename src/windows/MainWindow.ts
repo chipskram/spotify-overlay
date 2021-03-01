@@ -24,7 +24,7 @@ const connectedLabel = createTextLabel("connectedLabel", "Not connected to Spoti
 
 const init = () => {
   const rootLayout = new QGridLayout();
-  mainWindow.setWindowTitle("Main Window");
+  mainWindow.setWindowTitle("Settings");
 
   const centralWidget = new QWidget();
   mainWindow.setCentralWidget(centralWidget);
@@ -44,6 +44,7 @@ const init = () => {
 const setStatusConnected = () => {
   connectedLabel.setText("Connected to Spotify!");
   connectedLabel.setInlineStyle("color: green;");
+  authButton.setEnabled(false);
 }
 
 const setStatusPending = () => {

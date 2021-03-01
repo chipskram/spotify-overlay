@@ -2,6 +2,8 @@ import {mainWindow, setStatusConnected} from "./windows/MainWindow";
 import {Request, Response} from "express";
 import express from "express";
 import {spotify} from "./helper/spotifyWrapper";
+import {startPolling} from "./windows/OverlayWindow";
+import path from "path";
 
 const app = express();
 
@@ -14,7 +16,11 @@ app.get("/authenticate", (req: Request, res: Response) => {
     spotify.setRefreshToken(data.body.refresh_token);
     console.log("Authentication successful!");
     setStatusConnected();
-    res.sendStatus(200);
+
+    console.log("Start polling playing track data...");
+    startPolling();
+
+    res.sendFile(path.resolve(__dirname, "../public/auth.html"));
   }, (err) => {
     console.log("ERROR", err);
     res.sendStatus(500);
